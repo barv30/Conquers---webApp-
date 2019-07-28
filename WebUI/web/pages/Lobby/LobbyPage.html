@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <script src="../../Common/jquery-3.3.1.min.js"></script>
+    <script src="../../Common/context-path-helper.js"></script>
+    <script src="LobbyPageControl.js"></script>
+    <link rel="stylesheet" href="LobbyPage.css">
+    <title>Conquers Lobby</title>
+</head>
+<body class="LobbyContainer">
+<div class="TopToolbar">
+    <div class="toolbarContent">
+        <form method="GET" action="logout">
+            <input type="submit" value="Logout" class="logoutButton"/>
+        </form>
+        <span class="userNameSpan"></span>
+        <span class="emptySpan"></span>
+    </div>
+</div>
+<div class="mainDiv">
+    <div class="dialogDiv">
+        <div class="close" onclick="removeTerritoriesDialog()">
+            <img src="close.png"/>
+        </div>
+        <div class="dialogContent">
+            <div class="details">
+                <div class="stringBoard"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="gamesDiv">
+        <div class="gamesActions">
+            <input id="uploadInput" type="button" value="Upload" class="uploadInput" onclick="UploadGameClicked(event)"/>
+            <input id="fileInput" type="file" class="fileInput" accept="text/xml" onchange="loadGameClicked(event)"/>
+        </div>
+        <table class="gamesTable">
+            <thead>
+            <th>Game's Name</th>
+            <th>Creator's Name</th>
+            <th>Status Board</th>
+            <th>Territories Data</th>
+            <th>Units Type And Data</th>
+            <th>Amount Of Players</th>
+            <th>Status Game</th>
+            <th>Join Game</th>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <div class="usersDiv">
+        <table class="usersTable">
+            <thead>
+            <th>Users online:</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="../../Common/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="GameRoom.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="GameRoom.css">
+    <title>Game Room</title>
+</head>
+
+<body>
+<div class="toolBar">
+    <div class="toolbarContent">
+        <span class="leaveGame" onclick="onLeaveGameClick()">Leave Game</span>
+        <span class="userNameSpan">Hi, Ben</span>
+        <span class="gameStatus">Game status: Waiting for players...</span>
+    </div>
+</div>
+<div class="mainDiv">
+    <div class="dialogDiv">
+        <div class="dialogContent">
+            <div class="details">
+                <div class="header"></div>
+                <div class="units"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dialogDiv1">
+        <div class="dialogContent">
+            <div class="details">
+                <div class="header"></div>
+                <div class="units"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="winnerDialog">
+        <div class="close" onclick="resetGame()">
+            <img src="close.png"/>
+        </div>
+        <div class="dialogContent">
+            <div class="details">
+                <div class="header"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="mainDivBody">
+        <div class="leftDiv" style="flex-grow: 1">
+            <div class = "allDetails">
+                <div>
+                    <h2 class="PlayerTurn">Player Turn: </h2>
+                    <h2 class="currentPlayerName"></h2>
+                </div>
+                <div class="details">
+                    <div class="gameName">gameName</div>
+                <div class="creatorName">creatorName</div>
+                <div class="boardSize">boardSize</div>
+                <div class="playerNumber">
+                    <span>Players: </span>
+                    <span class="registeredPlayers"></span>
+                    <span> / </span>
+                    <span class="requiredPlayers"></span>
+                </div>
+                    <div class>
+                        <span>Rounds:</span>
+                        <span class="currentMove"></span>
+                        <span> / </span>
+                        <span class="totalMoves"></span>
+                    </div>
+                </div>
+            <div class="turnDetails">
+                <div class=>
+                    <span>Color:</span>
+                    <span class="ColorSpan"></span>
+                </div>
+                <div class=>
+                    <span>Turings:</span>
+                    <span class="scoreSpan">0</span>
+                </div>
+                <div></div>
+            </div>
+            </div>
+            <div class="actions">
+                <div class="action" onclick="onEndMoveClick()">End Turn</div>
+                <div class="action" onclick="onPlayTurnClick()">Play Turn</div>
+            </div>
+        </div>
+        <div class="board" style="flex-grow: 7">
+            <div class="boardBody">
+
+            </div>
+        </div>
+        <div class="players" style="flex-grow: 1">
+            <div class="playersNames">
+                <a>Name:</a>
+                <div class="playersNamesBody"></div>
+            </div>
+            <div class="playersTypes">
+                <a>Color:</a>
+                <div class="playersTypesBody"></div>
+            </div>
+            <div class="playersScore">
+                <a>Turings:</a>
+                <div class="playersScoreBody"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottomDiv">
+</div>
+</body>
+</html>
